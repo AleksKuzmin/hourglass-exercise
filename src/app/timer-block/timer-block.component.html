@@ -1,0 +1,16 @@
+<div class="timerBlock" [ngStyle]="styleTimerBlock()">
+  <ng-template [ngIf]="flip" [ngIfElse]="lowerHalf">
+    <div class="timerTriangle">
+      <div
+        #boxesUpper
+        *ngFor="let i of arrSize(5)"
+        class="box bg--violet"
+      ></div>
+    </div>
+  </ng-template>
+  <ng-template #lowerHalf>
+    <div class="timerTriangle">
+      <div #boxesLower *ngFor="let i of arrSize(5)" class="box"></div>
+    </div>
+  </ng-template>
+</div>
